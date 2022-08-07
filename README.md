@@ -1,1 +1,1 @@
-# SSD1306_SPI-Linux-driver
+# This is Linux driver for SSD1306 using SPI
