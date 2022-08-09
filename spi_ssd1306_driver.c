@@ -196,7 +196,7 @@ static int __init etx_spi_init(void)
   struct  spi_master *master;
   
   master = spi_busnum_to_master( etx_spi_device_info.bus_num );
-  if( master == NULL )
+  if ( master == NULL )
   {
     pr_err("SPI Master not found.\n");
     return -ENODEV;
@@ -204,7 +204,7 @@ static int __init etx_spi_init(void)
    
   // create a new slave device, given the master and device info
   etx_spi_device = spi_new_device( master, &etx_spi_device_info );
-  if( etx_spi_device == NULL ) 
+  if ( etx_spi_device == NULL ) 
   {
     pr_err("FAILED to create slave.\n");
     return -ENODEV;
@@ -215,7 +215,7 @@ static int __init etx_spi_init(void)
 
   // setup the SPI slave device
   ret = spi_setup( etx_spi_device );
-  if( ret )
+  if ( ret )
   {
     pr_err("FAILED to setup slave.\n");
     spi_unregister_device( etx_spi_device );
