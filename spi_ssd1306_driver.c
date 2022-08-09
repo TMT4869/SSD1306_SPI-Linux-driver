@@ -171,10 +171,10 @@ int etx_spi_write( uint8_t data )
   {    
     struct spi_transfer	tr = 
     {
-			.tx_buf	= &data,
-      		.rx_buf = &rx,
-			.len = 1,
-		};
+		.tx_buf	= &data,
+		.rx_buf = &rx,
+		.len = 1,
+	};
 
     spi_sync_transfer( etx_spi_device, &tr, 1 );
   }
